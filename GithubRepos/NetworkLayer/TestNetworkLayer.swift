@@ -9,7 +9,11 @@ import Foundation
 
 class TestNetworkLayer : NetworkLayer {
     
-    func getRepos<T: Codable>(completion: ((_ success: Bool, _ repos: T?) -> Void)) {
-        <#code#>
+    func getRepos<T: Codable>(completion: @escaping ((_ success: Bool, _ repos: T?) -> Void)) {
+        
+        DispatchQueue.main.async {
+            completion(true, nil)
+        }
+        
     }
 }
