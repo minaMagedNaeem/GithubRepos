@@ -97,6 +97,26 @@ class ReposListViewController: UIViewController {
         }
     }
     
+    private func getRepoDetails(repo: Repo, completion: @escaping ((Repo) -> Void)) {
+        self.view.startProgressAnim()
+        self.viewModel.getSpecificRepoDetails(repo: repo) {[weak self] (success, repo) in
+            self?.view.stopProgressAnim()
+            if success, let repo = repo {
+                completion(repo)
+            } else {
+                self?.displayAlert(title: "Error", message: "Something wrong happened, please try again")
+            }
+        }
+        
+    }
+    
+    private func goToRepoDetails(repo: Repo) {
+        
+        let repoDetails = RepoDetailsViewController(repo: repo)
+        
+        self.navigationController?.pushViewController(repoDetails, animated: true)
+    }
+    
     private func reloadTableView() {
         UIView.transition(with: reposTableView,
                           duration: 0.1,
@@ -120,6 +140,10 @@ extension ReposListViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.reposTableView.deselectRow(at: indexPath, animated: true)
+        
+        self.getRepoDetails(repo: self.viewModel.shownRepos[indexPath.row]) {[weak self] (repo) in
+            self?.goToRepoDetails(repo: repo)
+        }
     }
 }
 

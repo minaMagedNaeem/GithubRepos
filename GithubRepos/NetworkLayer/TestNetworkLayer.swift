@@ -16,4 +16,8 @@ class TestNetworkLayer : NetworkLayer {
         }
         
     }
+    
+    func getRepo<T: Codable>(url: String, completion: @escaping ((_ success: Bool, _ repo: T?) -> Void)) {
+        
+    }
 }

@@ -35,6 +35,8 @@
 		5B90953E27481C7C00704564 /* ReposListViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90953D27481C7C00704564 /* ReposListViewControllerFactory.swift */; };
 		5BA38EA92748443600EE2D81 /* RepoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA38EA72748443500EE2D81 /* RepoTableViewCell.swift */; };
 		5BA38EAA2748443600EE2D81 /* RepoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA38EA82748443500EE2D81 /* RepoTableViewCell.xib */; };
+		5BA38EB72748535200EE2D81 /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BA38EB52748535200EE2D81 /* RepoDetailsViewController.swift */; };
+		5BA38EB82748535200EE2D81 /* RepoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5BA38EB62748535200EE2D81 /* RepoDetailsViewController.xib */; };
 		8B61F00643E25C46309DA410 /* Pods_GithubRepos.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0F50FF759FC91138A4A8F890 /* Pods_GithubRepos.framework */; };
 		DE8E8E78747D6BA380478048 /* Pods_GithubRepos_GithubReposUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88D5CA5DAABE9BD331B0A65F /* Pods_GithubRepos_GithubReposUITests.framework */; };
 		DF80386218A5974B0CA3377A /* Pods_GithubReposTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CFD47EC48C4233ACB20CCC6E /* Pods_GithubReposTests.framework */; };
@@ -94,6 +96,8 @@
 		5B90953D27481C7C00704564 /* ReposListViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewControllerFactory.swift; sourceTree = "<group>"; };
 		5BA38EA72748443500EE2D81 /* RepoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoTableViewCell.swift; sourceTree = "<group>"; };
 		5BA38EA82748443500EE2D81 /* RepoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoTableViewCell.xib; sourceTree = "<group>"; };
+		5BA38EB52748535200EE2D81 /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
+		5BA38EB62748535200EE2D81 /* RepoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsViewController.xib; sourceTree = "<group>"; };
 		84028F0E64F403816285C141 /* Pods-GithubRepos.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubRepos.debug.xcconfig"; path = "Target Support Files/Pods-GithubRepos/Pods-GithubRepos.debug.xcconfig"; sourceTree = "<group>"; };
 		88D5CA5DAABE9BD331B0A65F /* Pods_GithubRepos_GithubReposUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GithubRepos_GithubReposUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC18CC7A676EE1196F3DC1B /* Pods-GithubReposTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GithubReposTests.release.xcconfig"; path = "Target Support Files/Pods-GithubReposTests/Pods-GithubReposTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +185,7 @@
 				5B9095042747F6A500704564 /* Protocols */,
 				5B9094FB2747ED6300704564 /* Factories */,
 				5B9094EB2747EB0800704564 /* ReposList */,
+				5BA38EB42748533200EE2D81 /* RepoDetails */,
 				5B9094B82747D1FE00704564 /* AppDelegate.swift */,
 				5B9094BA2747D1FE00704564 /* SceneDelegate.swift */,
 				5B9094BC2747D1FE00704564 /* ViewController.swift */,
@@ -303,6 +308,15 @@
 			path = cell;
 			sourceTree = "<group>";
 		};
+		5BA38EB42748533200EE2D81 /* RepoDetails */ = {
+			isa = PBXGroup;
+			children = (
+				5BA38EB52748535200EE2D81 /* RepoDetailsViewController.swift */,
+				5BA38EB62748535200EE2D81 /* RepoDetailsViewController.xib */,
+			);
+			path = RepoDetails;
+			sourceTree = "<group>";
+		};
 		DECD3A6B0385D434C2045ED1 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,6 +436,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BA38EB82748535200EE2D81 /* RepoDetailsViewController.xib in Resources */,
 				5B9094F22747ECD200704564 /* ReposListViewController.xib in Resources */,
 				5B9094C52747D1FE00704564 /* LaunchScreen.storyboard in Resources */,
 				5B9094C22747D1FE00704564 /* Assets.xcassets in Resources */,
@@ -534,6 +549,7 @@
 				5B9094F12747ECD200704564 /* ReposListViewController.swift in Sources */,
 				5B90950F2747F70100704564 /* RepoOwner.swift in Sources */,
 				5B90952A2748099900704564 /* GithubReposNetworkLayer.swift in Sources */,
+				5BA38EB72748535200EE2D81 /* RepoDetailsViewController.swift in Sources */,
 				5B9094FD2747EFCA00704564 /* LocalDataPersistorFactory.swift in Sources */,
 				5B90953427480A7700704564 /* TestNetworkLayer.swift in Sources */,
 				5B9094BD2747D1FE00704564 /* ViewController.swift in Sources */,

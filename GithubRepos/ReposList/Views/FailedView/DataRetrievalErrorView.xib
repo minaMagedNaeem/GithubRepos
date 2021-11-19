@@ -21,9 +21,6 @@
                             <rect key="frame" x="0.0" y="0.0" width="278" height="16"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <nil key="highlightedColor"/>
-                            <userDefinedRuntimeAttributes>
-                                <userDefinedRuntimeAttribute type="string" keyPath="l10nText" value="something_wrong_happened"/>
-                            </userDefinedRuntimeAttributes>
                         </label>
                         <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbS-8O-bsr">
                             <rect key="frame" x="91" y="32" width="96" height="30"/>
@@ -42,7 +39,6 @@
                                 <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                     <integer key="value" value="6"/>
                                 </userDefinedRuntimeAttribute>
-                                <userDefinedRuntimeAttribute type="string" keyPath="l10nTitle" value="try_again"/>
                             </userDefinedRuntimeAttributes>
                             <connections>
                                 <action selector="tryAgainPressed:" destination="iN0-l3-epB" eventType="touchUpInside" id="Kex-Wk-kbK"/>

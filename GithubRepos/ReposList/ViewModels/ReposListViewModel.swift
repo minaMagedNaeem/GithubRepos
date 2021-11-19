@@ -43,6 +43,16 @@ class ReposListViewModel {
         }
     }
     
+    func getSpecificRepoDetails(repo: Repo, completion: @escaping ((_ success: Bool, _ repo: Repo?) -> Void)) {
+        networkLayer.getRepo(url: repo.url) { (success : Bool, repo : Repo?) in
+            if success, let repo = repo {
+                completion(true, repo)
+            } else {
+                completion(false, nil)
+            }
+        }
+    }
+    
     func search(with text: String) {
         
         if text.isEmpty {

@@ -13,7 +13,6 @@ class RepoTableViewCell: UITableViewCell {
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var repoOwnerNameLabel: UILabel!
-    @IBOutlet weak var repoCreationDateLabel: UILabel!
     
     //MARK: - Lifecycle Methods
     override func awakeFromNib() {
@@ -33,7 +32,6 @@ class RepoTableViewCell: UITableViewCell {
         userImage.image = nil
         repoNameLabel.text = ""
         repoOwnerNameLabel.text = ""
-        repoCreationDateLabel.text = ""
     }
     
     //MARK: - Public Methods
@@ -43,7 +41,6 @@ class RepoTableViewCell: UITableViewCell {
         
         repoNameLabel.text = repo.fullName
         repoOwnerNameLabel.text = repo.owner.login
-        repoCreationDateLabel.text = ""
     }
     
 }
