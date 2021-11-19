@@ -9,6 +9,8 @@ import UIKit
 
 class ReposListViewController: UIViewController {
     
+    @IBOutlet var reposTableView: UITableView!
+    
     let viewModel : ReposListViewModel
     
     init(viewModel: ReposListViewModel) {
@@ -23,7 +25,18 @@ class ReposListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel.changeCompletion = { [weak self] in
+            self?.reposTableView.reloadData()
+        }
+        
+        
         // Do any additional setup after loading the view.
+    }
+    
+    func getRepos() {
+        viewModel.getRepos { success in
+            
+        }
     }
     
     

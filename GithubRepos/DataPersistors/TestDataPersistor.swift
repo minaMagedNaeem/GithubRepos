@@ -9,26 +9,26 @@ import Foundation
 
 class TestDataPersistor : DataPersistor {
     func getAllRepos() -> [Repo] {
-        <#code#>
+        return []
     }
     
     func getRepo(by id: String) -> [Repo] {
-        <#code#>
+        return []
     }
     
     func getRepos(by pageIndex: Int) -> [Repo] {
-        <#code#>
+        return []
     }
     
     func search(by searchText: String) -> [Repo] {
-        <#code#>
+        return []
     }
     
     func save(repos: [Repo]) {
-        <#code#>
+        
     }
     
     func save(repo: Repo) {
-        <#code#>
+        
     }
 }

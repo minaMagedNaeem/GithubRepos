@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReposListViewController" customModule="GithubRepos" customModuleProvider="target">
             <connections>
+                <outlet property="reposTableView" destination="Dxf-Vp-Vmh" id="8W7-oz-iX4"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
