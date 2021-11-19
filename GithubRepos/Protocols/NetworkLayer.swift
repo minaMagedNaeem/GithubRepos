@@ -9,5 +9,5 @@ import Foundation
 
 protocol NetworkLayer {
     
-    func getRepos(completion: ((_ success: Bool, _ repos: [Repo]) -> Void))
+    func getRepos<T: Decodable>(completion: ((_ success: Bool, _ repos: T?) -> Void))
 }
