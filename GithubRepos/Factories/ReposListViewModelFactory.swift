@@ -13,7 +13,9 @@ class ReposListViewModelFactory {
         
         let dataPersistor = LocalDataPersistorFactory.getLocalDataPersistor()
         
-        let viewModel = ReposListViewModel(dataPersistor: dataPersistor)
+        let networkLayer = NetworkLayerFactory.getNetworkLayer()
+        
+        let viewModel = ReposListViewModel(dataPersistor: dataPersistor, networkLayer: networkLayer)
         
         return viewModel
     }
