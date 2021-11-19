@@ -9,11 +9,11 @@ import Foundation
 
 class ReposListViewModelFactory {
     
-    class func getViewModel() -> ReposListViewModel {
+    class func getViewModel(testing: Bool = false) -> ReposListViewModel {
         
-        let dataPersistor = LocalDataPersistorFactory.getLocalDataPersistor()
+        let dataPersistor = LocalDataPersistorFactory.getLocalDataPersistor(testing: testing)
         
-        let networkLayer = NetworkLayerFactory.getNetworkLayer()
+        let networkLayer = NetworkLayerFactory.getNetworkLayer(testing: testing)
         
         let viewModel = ReposListViewModel(dataPersistor: dataPersistor, networkLayer: networkLayer)
         

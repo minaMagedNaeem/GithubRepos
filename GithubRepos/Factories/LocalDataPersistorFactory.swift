@@ -8,9 +8,9 @@
 import Foundation
 
 class LocalDataPersistorFactory {
-    class func getLocalDataPersistor(unitTesting: Bool = false) -> DataPersistor {
+    class func getLocalDataPersistor(testing: Bool = false) -> DataPersistor {
         
-        if unitTesting {
+        if testing {
             return TestDataPersistor()
         } else {
             return RealmDataPersistor()

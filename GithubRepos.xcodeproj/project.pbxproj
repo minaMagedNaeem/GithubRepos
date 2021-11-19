@@ -29,6 +29,7 @@
 		5B90952F274809DF00704564 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90952E274809DF00704564 /* NetworkLayer.swift */; };
 		5B90953427480A7700704564 /* TestNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90953327480A7700704564 /* TestNetworkLayer.swift */; };
 		5B90953927480AAB00704564 /* NetworkLayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90953827480AAB00704564 /* NetworkLayerFactory.swift */; };
+		5B90953E27481C7C00704564 /* ReposListViewControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90953D27481C7C00704564 /* ReposListViewControllerFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		5B90952E274809DF00704564 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		5B90953327480A7700704564 /* TestNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkLayer.swift; sourceTree = "<group>"; };
 		5B90953827480AAB00704564 /* NetworkLayerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayerFactory.swift; sourceTree = "<group>"; };
+		5B90953D27481C7C00704564 /* ReposListViewControllerFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewControllerFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,8 +170,6 @@
 				5B9094EE2747EB4400704564 /* ViewModels */,
 				5B9094ED2747EB3B00704564 /* Controllers */,
 				5B9094EC2747EB1A00704564 /* Views */,
-				5B9094EF2747ECD200704564 /* ReposListViewController.swift */,
-				5B9094F02747ECD200704564 /* ReposListViewController.xib */,
 			);
 			path = ReposList;
 			sourceTree = "<group>";
@@ -177,6 +177,7 @@
 		5B9094EC2747EB1A00704564 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5B9094F02747ECD200704564 /* ReposListViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -184,6 +185,7 @@
 		5B9094ED2747EB3B00704564 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				5B9094EF2747ECD200704564 /* ReposListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -202,6 +204,7 @@
 				5B9094FC2747EFCA00704564 /* LocalDataPersistorFactory.swift */,
 				5B9095182747FA4D00704564 /* ReposListViewModelFactory.swift */,
 				5B90953827480AAB00704564 /* NetworkLayerFactory.swift */,
+				5B90953D27481C7C00704564 /* ReposListViewControllerFactory.swift */,
 			);
 			path = Factories;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 				5B90951F2748015B00704564 /* RealmDataPersistor.swift in Sources */,
 				5B9095072747F6C500704564 /* Repo.swift in Sources */,
 				5B90953927480AAB00704564 /* NetworkLayerFactory.swift in Sources */,
+				5B90953E27481C7C00704564 /* ReposListViewControllerFactory.swift in Sources */,
 				5B9095192747FA4D00704564 /* ReposListViewModelFactory.swift in Sources */,
 				5B9094F72747ED4600704564 /* ReposListViewModel.swift in Sources */,
 				5B9094F12747ECD200704564 /* ReposListViewController.swift in Sources */,
