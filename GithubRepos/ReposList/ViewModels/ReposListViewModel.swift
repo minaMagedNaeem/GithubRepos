@@ -13,13 +13,43 @@ class ReposListViewModel {
     
     let networkLayer : NetworkLayer
     
-    var onReposRetrievalCompletion : ((_ success: Bool) -> Void)!
+    private var allRepos : [Repo] = [] {
+        didSet {
+            self.shownRepos = allRepos
+        }
+    }
+    
+    var shownRepos : [Repo] = [] {
+        didSet {
+            changeCompletion?()
+        }
+    }
+    
+    var changeCompletion : (() -> Void)?
     
     init(dataPersistor: DataPersistor, networkLayer: NetworkLayer) {
         self.dataPersistor = dataPersistor
         self.networkLayer = networkLayer
     }
     
+    func getRepos(retrievalCompletion: @escaping ((_ success: Bool) -> Void)) {
+        networkLayer.getRepos {[weak self] (success : Bool, repos : [Repo]?) in
+            if success, let repos = repos {
+                self?.allRepos = repos
+                retrievalCompletion(true)
+            } else {
+                retrievalCompletion(false)
+            }
+        }
+    }
     
-    
+    func search(with text: String) {
+        
+        if text.isEmpty {
+            self.shownRepos = self.allRepos
+            return
+        }
+        
+        self.shownRepos = self.allRepos.filter({ $0.name.contains(text.trimmingCharacters(in: .whitespacesAndNewlines))})
+    }
 }

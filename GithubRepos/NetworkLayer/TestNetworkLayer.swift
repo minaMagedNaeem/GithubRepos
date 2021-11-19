@@ -9,7 +9,7 @@ import Foundation
 
 class TestNetworkLayer : NetworkLayer {
     
-    func getRepos<T: Decodable>(completion: ((_ success: Bool, _ repos: T?) -> Void)) {
+    func getRepos<T: Codable>(completion: ((_ success: Bool, _ repos: T?) -> Void)) {
         <#code#>
     }
 }
