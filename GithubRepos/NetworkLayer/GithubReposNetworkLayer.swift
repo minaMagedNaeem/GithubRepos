@@ -11,7 +11,7 @@ class GithubReposNetworkLayer : NetworkLayer {
     
     let baseURL = "https://api.github.com"
     
-    func getRepos<T: Decodable>(completion: ((_ success: Bool, _ repos: T?) -> Void)) {
+    func getRepos<T: Codable>(completion: ((_ success: Bool, _ repos: T?) -> Void)) {
         let url = URL(string: "\(baseURL)/repositories")!
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
