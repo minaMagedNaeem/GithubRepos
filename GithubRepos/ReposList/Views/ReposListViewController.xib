@@ -11,6 +11,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ReposListViewController" customModule="GithubRepos" customModuleProvider="target">
             <connections>
                 <outlet property="reposTableView" destination="Dxf-Vp-Vmh" id="8W7-oz-iX4"/>
+                <outlet property="searchBar" destination="zPz-ju-pze" id="zN2-tL-0OW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -29,7 +30,7 @@
                         <navigationItem title="Repos" id="Til-iP-80e"/>
                     </items>
                 </navigationBar>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-Vp-Vmh">
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="interactive" style="plain" separatorStyle="default" rowHeight="120" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Dxf-Vp-Vmh">
                     <rect key="frame" x="0.0" y="152" width="414" height="744"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                 </tableView>

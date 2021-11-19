@@ -50,6 +50,6 @@ class ReposListViewModel {
             return
         }
         
-        self.shownRepos = self.allRepos.filter({ $0.name.contains(text.trimmingCharacters(in: .whitespacesAndNewlines))})
+        self.shownRepos = self.allRepos.filter({ $0.fullName.contains(text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased())})
     }
 }

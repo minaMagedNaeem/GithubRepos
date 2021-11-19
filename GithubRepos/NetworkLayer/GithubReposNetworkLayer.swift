@@ -16,14 +16,7 @@ class GithubReposNetworkLayer : NetworkLayer {
 
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
-            if error != nil {
-                DispatchQueue.main.async {
-                    completion(false, nil)
-                }
-                return
-            }
-            
-            guard let data = data else {
+            guard let data = data, error == nil else {
                 DispatchQueue.main.async {
                     completion(false, nil)
                 }
