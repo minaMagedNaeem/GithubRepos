@@ -66,13 +66,14 @@ class ReposListViewController: UIViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow(notification:)), name: UIResponder.keyboardWillShowNotification, object: nil)
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide(notification:)), name: UIResponder.keyboardWillHideNotification, object: nil)
     }
-    
+    //MARK: - Push table view content view up
     @objc private func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             reposTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
         }
     }
 
+    //MARK: - Put table view content view back down
     @objc private func keyboardWillHide(notification: NSNotification) {
         reposTableView.contentInset = .zero
     }
@@ -117,6 +118,7 @@ class ReposListViewController: UIViewController {
         self.navigationController?.pushViewController(repoDetails, animated: true)
     }
     
+    //MARK:- Reload table with animation
     private func reloadTableView() {
         UIView.transition(with: reposTableView,
                           duration: 0.1,
