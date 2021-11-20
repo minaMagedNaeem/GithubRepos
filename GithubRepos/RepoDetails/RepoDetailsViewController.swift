@@ -13,7 +13,7 @@ class RepoDetailsViewController: UIViewController {
     @IBOutlet weak var ownerImage: UIImageView!
     @IBOutlet weak var repoNameLabel: UILabel!
     @IBOutlet weak var repoOwnerNameLabel: UILabel!
-    @IBOutlet weak var urlLabel: UILabel!
+    @IBOutlet weak var urlButton: UIButton!
     @IBOutlet weak var descriptionLabel: UILabel!
     @IBOutlet weak var langLabel: UILabel!
     @IBOutlet weak var creationLabel: UILabel!
@@ -37,6 +37,13 @@ class RepoDetailsViewController: UIViewController {
         bindView()
     }
     
+    //MARK: - IBActions
+    @IBAction func urlPressed(_ sender: Any) {
+        if let url = URL(string: self.repo.htmlUrl), UIApplication.shared.canOpenURL(url) {
+            UIApplication.shared.open(url, options: [:], completionHandler: nil)
+        }
+    }
+    
     //MARK: - Private Methods
 
     private func bindView() {
@@ -46,7 +53,7 @@ class RepoDetailsViewController: UIViewController {
         self.ownerImage.downloadImage(url: repo.owner.avatarURL)
         self.repoNameLabel.text = repo.fullName
         self.repoOwnerNameLabel.text = repo.owner.login
-        self.urlLabel.text = repo.htmlUrl
+        self.urlButton.setTitle(repo.htmlUrl, for: .normal)
         self.descriptionLabel.text = repo.description
         self.langLabel.text = "Language: \(repo.language ?? "Not available")"
         self.creationLabel.text = repo.createdAt
