@@ -9,8 +9,6 @@ import Foundation
 
 class ReposListViewModel {
     
-    let dataPersistor : DataPersistor
-    
     let networkLayer : NetworkLayer
     
     private var allRepos : [Repo] = [] {
@@ -27,8 +25,7 @@ class ReposListViewModel {
     
     var changeCompletion : (() -> Void)?
     
-    init(dataPersistor: DataPersistor, networkLayer: NetworkLayer) {
-        self.dataPersistor = dataPersistor
+    init(networkLayer: NetworkLayer) {
         self.networkLayer = networkLayer
     }
     
@@ -43,6 +40,16 @@ class ReposListViewModel {
         }
     }
     
+
+    func getSpecificRepoDetails(repo: Repo, completion: @escaping ((_ success: Bool, _ repo: Repo?) -> Void)) {
+        networkLayer.getRepo(url: repo.url) { (success : Bool, repo : Repo?) in
+            if success, let repo = repo {
+                completion(true, repo)
+            } else {
+                completion(false, nil)
+            }
+        }
+    }
     func search(with text: String) {
         
         if text.isEmpty {
@@ -50,6 +57,6 @@ class ReposListViewModel {
             return
         }
         
-        self.shownRepos = self.allRepos.filter({ $0.name.contains(text.trimmingCharacters(in: .whitespacesAndNewlines))})
+        self.shownRepos = self.allRepos.filter({ $0.fullName.contains(text.trimmingCharacters(in: .whitespacesAndNewlines).lowercased())})
     }
 }

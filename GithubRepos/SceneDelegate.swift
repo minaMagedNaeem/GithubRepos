@@ -18,9 +18,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        //MARK: - Attach ReposList ViewController embedded in a navigation controller
+        
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
-            window.rootViewController = ReposListViewControllerFactory.getViewController()
+            let navController = UINavigationController(rootViewController: ReposListViewControllerFactory.getViewController())
+            navController.navigationBar.prefersLargeTitles = true
+            window.rootViewController = navController
             self.window = window
             window.makeKeyAndVisible()
         }
