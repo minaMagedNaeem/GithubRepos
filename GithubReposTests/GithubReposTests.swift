@@ -9,18 +9,37 @@ import XCTest
 @testable import GithubRepos
 
 class GithubReposTests: XCTestCase {
+    
+    var viewModel : ReposListViewModel!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        self.viewModel = ReposListViewModelFactory.getViewModel(testing: true)
+        
+        let expectation = self.expectation(description: "GettingCharacters")
+        
+        viewModel.getRepos { (success) in
+            XCTAssertTrue(success)
+            expectation.fulfill()
+        }
+        
+        waitForExpectations(timeout: 3, handler: nil)
     }
 
     override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        self.viewModel = nil
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testSearchRepos() throws {
+        
+        let searchText : String = "ano"
+        
+        viewModel.search(with: searchText)
+        
+        let repos = viewModel.shownRepos
+        
+        for repo in repos {
+            XCTAssert(repo.fullName.contains(searchText), "Error in test case. Expected text that has substring \(searchText), found \(repo.fullName)")
+        }
     }
 
     func testPerformanceExample() throws {
