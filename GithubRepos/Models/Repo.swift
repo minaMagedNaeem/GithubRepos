@@ -16,7 +16,7 @@ class Repo: Codable {
     let description : String?
     let createdAt : String?
     let language : String?
-
+    
     enum CodingKeys: String, CodingKey {
         case id
         case nodeID = "node_id"
@@ -29,7 +29,7 @@ class Repo: Codable {
         case language
         case htmlUrl = "html_url"
     }
-
+    
     init(id: Int, nodeID: String, name: String, fullName: String, owner: RepoOwner, url: String, description: String, createdAt: String, language: String, htmlUrl: String) {
         self.id = id
         self.nodeID = nodeID

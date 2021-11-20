@@ -72,7 +72,7 @@ class ReposListViewController: UIViewController {
             reposTableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: keyboardSize.height, right: 0)
         }
     }
-
+    
     //MARK: - Put table view content view back down
     @objc private func keyboardWillHide(notification: NSNotification) {
         reposTableView.contentInset = .zero
@@ -112,7 +112,6 @@ class ReposListViewController: UIViewController {
     }
     
     private func goToRepoDetails(repo: Repo) {
-        
         let repoDetails = RepoDetailsViewController(repo: repo)
         
         self.navigationController?.pushViewController(repoDetails, animated: true)

@@ -10,12 +10,10 @@ import Foundation
 class ReposListViewControllerFactory {
     
     class func getViewController() -> ReposListViewController {
-        
         let viewModel = ReposListViewModelFactory.getViewModel(testing: false)
         
         let viewController = ReposListViewController(viewModel: viewModel)
         
         return viewController
     }
-    
 }

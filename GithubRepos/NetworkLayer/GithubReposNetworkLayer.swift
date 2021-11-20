@@ -10,9 +10,8 @@ import Foundation
 class GithubReposNetworkLayer : NetworkLayer {
     
     let baseURL = "https://api.github.com"
-
+    
     func getRepo<T: Codable>(url: String, completion: @escaping ((_ success: Bool, _ repo: T?) -> Void)) {
-        
         let url = URL(string: url)!
         
         self.runRequest(url: url, completion: completion)
@@ -25,7 +24,6 @@ class GithubReposNetworkLayer : NetworkLayer {
     }
     
     func runRequest<T: Codable>(url: URL, completion: @escaping ((_ success: Bool, _ decodedValue: T?) -> Void)) {
-        
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             guard let data = data, error == nil else {

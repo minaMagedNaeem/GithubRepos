@@ -13,7 +13,7 @@ class ReposListViewModelFactory {
         let networkLayer = NetworkLayerFactory.getNetworkLayer(testing: testing)
         
         let viewModel = ReposListViewModel(networkLayer: networkLayer)
-
+        
         return viewModel
     }
 }

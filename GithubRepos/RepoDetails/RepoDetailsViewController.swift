@@ -30,10 +30,10 @@ class RepoDetailsViewController: UIViewController {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         bindView()
     }
     
@@ -45,11 +45,9 @@ class RepoDetailsViewController: UIViewController {
     }
     
     //MARK: - Private Methods
-
+    
     private func bindView() {
-        
         self.title = repo.fullName
-        
         self.ownerImage.downloadImage(url: repo.owner.avatarURL)
         self.repoNameLabel.text = repo.fullName
         self.repoOwnerNameLabel.text = repo.owner.login

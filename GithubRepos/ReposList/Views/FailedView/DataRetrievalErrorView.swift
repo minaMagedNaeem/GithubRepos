@@ -26,7 +26,7 @@ class DataRetrievalErrorView : UIView {
         
         return failureView
     }
-
+    
     class func instanceFromNib() -> DataRetrievalErrorView {
         return UINib(nibName: "DataRetrievalErrorView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! DataRetrievalErrorView
     }

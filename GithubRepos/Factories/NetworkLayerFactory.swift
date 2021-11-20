@@ -10,7 +10,6 @@ import Foundation
 class NetworkLayerFactory {
     
     class func getNetworkLayer(testing : Bool = false) -> NetworkLayer {
-        
         if testing {
             return TestNetworkLayer()
         } else {
