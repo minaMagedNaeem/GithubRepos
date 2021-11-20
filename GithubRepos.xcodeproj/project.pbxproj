@@ -21,13 +21,9 @@
 		5B9094F12747ECD200704564 /* ReposListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9094EF2747ECD200704564 /* ReposListViewController.swift */; };
 		5B9094F22747ECD200704564 /* ReposListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5B9094F02747ECD200704564 /* ReposListViewController.xib */; };
 		5B9094F72747ED4600704564 /* ReposListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9094F62747ED4600704564 /* ReposListViewModel.swift */; };
-		5B9094FD2747EFCA00704564 /* LocalDataPersistorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9094FC2747EFCA00704564 /* LocalDataPersistorFactory.swift */; };
 		5B9095072747F6C500704564 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9095062747F6C500704564 /* Repo.swift */; };
 		5B90950F2747F70100704564 /* RepoOwner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90950E2747F70100704564 /* RepoOwner.swift */; };
-		5B9095142747F7B300704564 /* DataPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9095132747F7B300704564 /* DataPersistor.swift */; };
 		5B9095192747FA4D00704564 /* ReposListViewModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9095182747FA4D00704564 /* ReposListViewModelFactory.swift */; };
-		5B90951F2748015B00704564 /* RealmDataPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90951E2748015B00704564 /* RealmDataPersistor.swift */; };
-		5B9095242748021D00704564 /* TestDataPersistor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9095232748021D00704564 /* TestDataPersistor.swift */; };
 		5B90952A2748099900704564 /* GithubReposNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B9095292748099900704564 /* GithubReposNetworkLayer.swift */; };
 		5B90952F274809DF00704564 /* NetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90952E274809DF00704564 /* NetworkLayer.swift */; };
 		5B90953427480A7700704564 /* TestNetworkLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B90953327480A7700704564 /* TestNetworkLayer.swift */; };
@@ -82,13 +78,9 @@
 		5B9094EF2747ECD200704564 /* ReposListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewController.swift; sourceTree = "<group>"; };
 		5B9094F02747ECD200704564 /* ReposListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReposListViewController.xib; sourceTree = "<group>"; };
 		5B9094F62747ED4600704564 /* ReposListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewModel.swift; sourceTree = "<group>"; };
-		5B9094FC2747EFCA00704564 /* LocalDataPersistorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataPersistorFactory.swift; sourceTree = "<group>"; };
 		5B9095062747F6C500704564 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
 		5B90950E2747F70100704564 /* RepoOwner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoOwner.swift; sourceTree = "<group>"; };
-		5B9095132747F7B300704564 /* DataPersistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataPersistor.swift; sourceTree = "<group>"; };
 		5B9095182747FA4D00704564 /* ReposListViewModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposListViewModelFactory.swift; sourceTree = "<group>"; };
-		5B90951E2748015B00704564 /* RealmDataPersistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmDataPersistor.swift; sourceTree = "<group>"; };
-		5B9095232748021D00704564 /* TestDataPersistor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestDataPersistor.swift; sourceTree = "<group>"; };
 		5B9095292748099900704564 /* GithubReposNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubReposNetworkLayer.swift; sourceTree = "<group>"; };
 		5B90952E274809DF00704564 /* NetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkLayer.swift; sourceTree = "<group>"; };
 		5B90953327480A7700704564 /* TestNetworkLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestNetworkLayer.swift; sourceTree = "<group>"; };
@@ -180,7 +172,6 @@
 			isa = PBXGroup;
 			children = (
 				5B9095282748096500704564 /* NetworkLayer */,
-				5B90951D2748013500704564 /* DataPersistors */,
 				5B9095052747F6B500704564 /* Models */,
 				5B9095042747F6A500704564 /* Protocols */,
 				5B9094FB2747ED6300704564 /* Factories */,
@@ -255,7 +246,6 @@
 		5B9094FB2747ED6300704564 /* Factories */ = {
 			isa = PBXGroup;
 			children = (
-				5B9094FC2747EFCA00704564 /* LocalDataPersistorFactory.swift */,
 				5B9095182747FA4D00704564 /* ReposListViewModelFactory.swift */,
 				5B90953827480AAB00704564 /* NetworkLayerFactory.swift */,
 				5B90953D27481C7C00704564 /* ReposListViewControllerFactory.swift */,
@@ -266,7 +256,6 @@
 		5B9095042747F6A500704564 /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				5B9095132747F7B300704564 /* DataPersistor.swift */,
 				5B90952E274809DF00704564 /* NetworkLayer.swift */,
 			);
 			path = Protocols;
@@ -279,15 +268,6 @@
 				5B90950E2747F70100704564 /* RepoOwner.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		5B90951D2748013500704564 /* DataPersistors */ = {
-			isa = PBXGroup;
-			children = (
-				5B90951E2748015B00704564 /* RealmDataPersistor.swift */,
-				5B9095232748021D00704564 /* TestDataPersistor.swift */,
-			);
-			path = DataPersistors;
 			sourceTree = "<group>";
 		};
 		5B9095282748096500704564 /* NetworkLayer */ = {
@@ -537,7 +517,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B90952F274809DF00704564 /* NetworkLayer.swift in Sources */,
-				5B90951F2748015B00704564 /* RealmDataPersistor.swift in Sources */,
 				5B619E1427483B2A00CD0EE7 /* DataRetrievalErrorView.swift in Sources */,
 				5BA38EA92748443600EE2D81 /* RepoTableViewCell.swift in Sources */,
 				5B9095072747F6C500704564 /* Repo.swift in Sources */,
@@ -550,13 +529,10 @@
 				5B90950F2747F70100704564 /* RepoOwner.swift in Sources */,
 				5B90952A2748099900704564 /* GithubReposNetworkLayer.swift in Sources */,
 				5BA38EB72748535200EE2D81 /* RepoDetailsViewController.swift in Sources */,
-				5B9094FD2747EFCA00704564 /* LocalDataPersistorFactory.swift in Sources */,
 				5B90953427480A7700704564 /* TestNetworkLayer.swift in Sources */,
 				5B9094BD2747D1FE00704564 /* ViewController.swift in Sources */,
-				5B9095142747F7B300704564 /* DataPersistor.swift in Sources */,
 				5B9094B92747D1FE00704564 /* AppDelegate.swift in Sources */,
 				5B9094BB2747D1FE00704564 /* SceneDelegate.swift in Sources */,
-				5B9095242748021D00704564 /* TestDataPersistor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,8 +9,6 @@ import Foundation
 
 class ReposListViewModel {
     
-    let dataPersistor : DataPersistor
-    
     let networkLayer : NetworkLayer
     
     private var allRepos : [Repo] = [] {
@@ -27,8 +25,7 @@ class ReposListViewModel {
     
     var changeCompletion : (() -> Void)?
     
-    init(dataPersistor: DataPersistor, networkLayer: NetworkLayer) {
-        self.dataPersistor = dataPersistor
+    init(networkLayer: NetworkLayer) {
         self.networkLayer = networkLayer
     }
     

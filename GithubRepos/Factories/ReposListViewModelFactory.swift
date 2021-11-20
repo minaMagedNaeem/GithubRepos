@@ -11,11 +11,9 @@ class ReposListViewModelFactory {
     
     class func getViewModel(testing: Bool = false) -> ReposListViewModel {
         
-        let dataPersistor = LocalDataPersistorFactory.getLocalDataPersistor(testing: testing)
-        
         let networkLayer = NetworkLayerFactory.getNetworkLayer(testing: testing)
         
-        let viewModel = ReposListViewModel(dataPersistor: dataPersistor, networkLayer: networkLayer)
+        let viewModel = ReposListViewModel(networkLayer: networkLayer)
         
         return viewModel
     }
